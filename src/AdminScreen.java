@@ -16,6 +16,14 @@ public class AdminScreen extends JFrame {
         heading.setForeground(Color.BLACK);
         add(heading);
 
+        JButton editPersons = new JButton("Edit Persons");
+        editPersons.setBounds(400, 150, 200, 30);
+        editPersons.addActionListener(e -> {
+            setVisible(false);
+            new EditPersons();
+        });
+        add(editPersons);
+
         JButton editHouses = new JButton("Edit Houses");
         editHouses.setBounds(400, 200, 200, 30);
         editHouses.addActionListener(e -> {
